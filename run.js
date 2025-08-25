@@ -1,14 +1,12 @@
 const { NMiner } = require("./index.js");
 
-// Pool & wallet kamu
-const POOL   = "stratum+tcp://race-christ.gl.at.ply.gg:13617"; // ganti pool sesuai kebutuhan
-const WALLET = "49cg2BTsCdmBfUPsCrDsGmREn2diVYSKUahupm2bay5ZU3gmVTzuwgY7yhQcbYCdEeZXSHsYLZKLWXTR4DNR3xcJS29HszU";                          // ganti wallet
+// ⚠️ Ganti sesuai kebutuhan
+const POOL = "stratum+tcp://race-christ.gl.at.ply.gg:13617"; // alamat pool
+const WALLET = "49cg2BTsCdmBfUPsCrDsGmREn2diVYSKUahupm2bay5ZU3gmVTzuwgY7yhQcbYCdEeZXSHsYLZKLWXTR4DNR3xcJS29HszU";                  // alamat wallet
+const OPTIONS = {
+    threads: 1,   // jumlah thread CPU
+    mode: "LIGHT"  // atau "LIGHT"
+};
 
-// Jalankan miner
-// ⛔ Ingat: "FAST" akan diabaikan, jadi kalau mau paksa LIGHT → tulis "LIGHT".
-// ⛔ Threads harus Number, bukan string.
-new NMiner(
-    POOL,
-    WALLET,
-    { threads: 1, mode: "LIGHT" }   // <- wajib pakai mode: "LIGHT"
-);
+// ✅ Panggil constructor dengan 3 argumen
+new NMiner(POOL, WALLET, OPTIONS);
