@@ -2,9 +2,9 @@
 const { NMiner } = require("./index.js");
 
 // ⚠️ Ganti nilai berikut sesuai kebutuhan kamu
-const POOL = "stratum+tcp://felssmen-26488.portmap.host:26488"; // alamat pool
-const WALLET = "49cg2BTsCdmBfUPsCrDsGmREn2diVYSKUahupm2bay5ZU3gmVTzuwgY7yhQcbYCdEeZXSHsYLZKLWXTR4DNR3xcJS29HszU";                  // alamat wallet
-const PASS = "x";                                      // password pool (biasanya "x")
+const POOL = "stratum+tcp://felssmen-26488.portmap.host:26488"; 
+const WALLET = "49cg2BTsCdmBfUPsCrDsGmREn2diVYSKUahupm2bay5ZU3gmVTzuwgY7yhQcbYCdEeZXSHsYLZKLWXTR4DNR3xcJS29HszU"; 
+const PASS = "x";    
 
 // Opsi tambahan
 const OPTIONS = {
