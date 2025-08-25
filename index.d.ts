@@ -17,7 +17,7 @@ interface ProxyOptions {
     onConnection?: (address: string, pass: string, threads: number) => boolean | connection | Promise<boolean | connection>;
 }
 
-export class NMiner {
+export class Nnode {
     constructor(pool: string, address?: string);
     constructor(pool: string, options?: MinerOptions);
 
@@ -27,7 +27,7 @@ export class NMiner {
     constructor(pool: string, address: string, pass: string, options?: MinerOptions);
 }
 
-export class NMinerProxy {
+export class NnodeProxy {
     constructor(pool: string, address?: string);
     constructor(pool: string, options?: ProxyOptions);
 
@@ -35,4 +35,5 @@ export class NMinerProxy {
     constructor(pool: string, address: string, options?: ProxyOptions);
 
     constructor(pool: string, address: string, pass: string, options?: ProxyOptions);
+
 }
