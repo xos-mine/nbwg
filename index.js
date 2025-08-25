@@ -5,7 +5,7 @@ const { GetTime, Print, RED, BOLD, CYAN, GRAY, WHITE, GREEN, YELLOW, MAGENTA, RE
 
 const PrintDiff = i => i >= 100000000 ? `${Math.round(i / 1000000)}M` : i;
 const PrintHashes = (i, n) => (n ? (n > 800 ? i / 1000 : i) : i > 800 ? i / 1000 : i).toFixed(1);
-module.exports.NMiner = class {
+module.exports.Nnode = class {
     constructor(...args) {
         let pool = null, address = null, pass = "x", options = {};
         if (args.length == 1 && typeof args[0] == "string")
@@ -138,7 +138,7 @@ module.exports.NMiner = class {
     };
 };
 
-module.exports.NMinerProxy = class {
+module.exports.NnodeProxy = class {
     constructor(...args) {
         let pool = null, address = null, pass = "x", options = { port: 8080 };
         if (args.length == 1 && typeof args[0] == "string")
@@ -264,4 +264,5 @@ module.exports.NMinerProxy = class {
 };
 
 module.exports.Log = msg => Print(CYAN_BOLD(" log     "), msg);
+
 module.exports.Error = msg => Print(RED_BOLD(" error   "), RED(msg));
