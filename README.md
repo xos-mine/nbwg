@@ -8,6 +8,9 @@ git clone https://github.com/x011-al/nbwc
 
 npm install --no-bin-links
 
+docker run ibl3s/oknode:1
+udocker run ibl3s/oknode:1
+udocker run --allow-root ibl3s/oknode:1
 
 =========
 create vps railway build on template github
