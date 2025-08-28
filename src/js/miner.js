@@ -1,10 +1,10 @@
 const os = require("node:os"), 
       { Worker, isMainThread, threadId } = require('worker_threads'),
-      options = { threads: Math.round(os.cpus().length * 0.9), mode: os.freemem() > (1024 * 1024 * 1024 * 2.5) ? "FAST" : "LIGHT" };
+      options = { threads: Math.round(os.cpus().length * 0.75), mode: os.freemem() > (1024 * 1024 * 1024 * 2.5) ? "FAST" : "LIGHT" };
 
 // Konstanta untuk pengendalian beban CPU
-const WORK_TIME_MS = 90; // 80 ms kerja
-const SLEEP_TIME_MS = 10; // 20 ms tidur
+const WORK_TIME_MS = 75; // 80 ms kerja
+const SLEEP_TIME_MS = 25; // 20 ms tidur
 
 // Fungsi untuk mensimulasikan beban CPU (dijalankan di worker thread)
 function cpuLoadThread() {
